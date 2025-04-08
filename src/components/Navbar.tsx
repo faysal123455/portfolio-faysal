@@ -27,7 +27,7 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    { name: 'Github', href: 'https://github.com/', icon: <Github className="h-5 w-5" /> },
+    { name: 'Github', href: 'https://github.com/AHBRIJESH', icon: <Github className="h-5 w-5" /> },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/', icon: <Linkedin className="h-5 w-5" /> },
     { name: 'Email', href: 'mailto:ahbrijeesh2004@gmail.com', icon: <Mail className="h-5 w-5" /> },
   ];

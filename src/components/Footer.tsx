@@ -26,7 +26,7 @@ const Footer = () => {
           
           <div className="flex space-x-6 mb-6">
             <a
-              href="https://github.com/"
+              href="https://github.com/AHBRIJESH"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-navy-300 transition-colors duration-300"

@@ -72,7 +72,7 @@ const ContactSection = () => {
               <h4 className="font-medium text-navy-900 mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://github.com/" 
+                  href="https://github.com/AHBRIJESH" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-navy-100 p-3 rounded-full text-navy-700 hover:bg-navy-200 transition-colors"
