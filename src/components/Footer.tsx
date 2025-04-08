@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp, Home, GraduationCap, Briefcase, FolderKanban, Medal, Contact } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -9,6 +10,15 @@ const Footer = () => {
       behavior: 'smooth'
     });
   };
+
+  const navItems = [
+    { name: 'About', href: '#about', icon: <Home className="h-4 w-4 mr-1" /> },
+    { name: 'Education', href: '#education', icon: <GraduationCap className="h-4 w-4 mr-1" /> },
+    { name: 'Experience', href: '#experience', icon: <Briefcase className="h-4 w-4 mr-1" /> },
+    { name: 'Projects', href: '#projects', icon: <FolderKanban className="h-4 w-4 mr-1" /> },
+    { name: 'Skills', href: '#skills', icon: <Medal className="h-4 w-4 mr-1" /> },
+    { name: 'Contact', href: '#contact', icon: <Contact className="h-4 w-4 mr-1" /> },
+  ];
 
   return (
     <footer className="bg-navy-900 text-white py-12">
@@ -22,7 +32,13 @@ const Footer = () => {
             <ArrowUp className="h-5 w-5" />
           </button>
 
-          <h2 className="text-2xl font-bold mb-4">A H BRIJEESH</h2>
+          <div className="flex items-center mb-4">
+            <Avatar className="h-16 w-16 border-2 border-navy-300 mr-3">
+              <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijeesh" />
+              <AvatarFallback>AHB</AvatarFallback>
+            </Avatar>
+            <h2 className="text-2xl font-bold">A H BRIJEESH</h2>
+          </div>
           
           <div className="flex space-x-6 mb-6">
             <a
@@ -52,13 +68,17 @@ const Footer = () => {
             </a>
           </div>
           
-          <div className="flex space-x-6 text-navy-300 mb-8">
-            <a href="#about" className="hover:text-white transition-colors duration-300">About</a>
-            <a href="#education" className="hover:text-white transition-colors duration-300">Education</a>
-            <a href="#experience" className="hover:text-white transition-colors duration-300">Experience</a>
-            <a href="#projects" className="hover:text-white transition-colors duration-300">Projects</a>
-            <a href="#skills" className="hover:text-white transition-colors duration-300">Skills</a>
-            <a href="#contact" className="hover:text-white transition-colors duration-300">Contact</a>
+          <div className="flex flex-wrap justify-center space-x-4 md:space-x-6 text-navy-300 mb-8">
+            {navItems.map((item) => (
+              <a 
+                key={item.name}
+                href={item.href} 
+                className="hover:text-white transition-colors duration-300 flex items-center mb-2"
+              >
+                {item.icon}
+                <span className="ml-1">{item.name}</span>
+              </a>
+            ))}
           </div>
           
           <div className="text-navy-400 text-sm">

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Home, GraduationCap, Briefcase, FolderKanban, Medal, Contact } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,12 +18,12 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Education', href: '#education' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '#about', icon: <Home className="h-4 w-4 mr-1" /> },
+    { name: 'Education', href: '#education', icon: <GraduationCap className="h-4 w-4 mr-1" /> },
+    { name: 'Experience', href: '#experience', icon: <Briefcase className="h-4 w-4 mr-1" /> },
+    { name: 'Projects', href: '#projects', icon: <FolderKanban className="h-4 w-4 mr-1" /> },
+    { name: 'Skills', href: '#skills', icon: <Medal className="h-4 w-4 mr-1" /> },
+    { name: 'Contact', href: '#contact', icon: <Contact className="h-4 w-4 mr-1" /> },
   ];
 
   const socialLinks = [
@@ -40,7 +40,14 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-navy-800">
+        <a href="#" className="text-xl font-bold text-navy-800 flex items-center">
+          <div className="w-10 h-10 rounded-full overflow-hidden mr-2 border-2 border-navy-300">
+            <img 
+              src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" 
+              alt="A H Brijeesh" 
+              className="w-full h-full object-cover"
+            />
+          </div>
           A H <span className="text-navy-600">BRIJEESH</span>
         </a>
 
@@ -51,8 +58,9 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-navy-800 hover:text-navy-600 font-medium transition-colors duration-200"
+                className="text-navy-800 hover:text-navy-600 font-medium transition-colors duration-200 flex items-center"
               >
+                {item.icon}
                 {item.name}
               </a>
             ))}
@@ -100,10 +108,11 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-navy-800 hover:text-navy-600 font-medium py-2 transition-colors duration-200"
+              className="text-navy-800 hover:text-navy-600 font-medium py-2 transition-colors duration-200 flex items-center"
               onClick={() => setIsOpen(false)}
             >
-              {item.name}
+              {item.icon}
+              <span className="ml-2">{item.name}</span>
             </a>
           ))}
 

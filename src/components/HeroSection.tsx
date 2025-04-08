@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Mail, Phone, MapPin, GraduationCap, Award } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const HeroSection = () => {
   return (
@@ -9,12 +10,23 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-4">
-              A H BRIJEESH
-            </h1>
-            <h2 className="text-xl md:text-2xl font-medium text-navy-600 mb-6">
-              Software Engineer • Machine Learning Enthusiast
-            </h2>
+            <div className="flex items-center mb-6">
+              <div className="mr-4 hidden sm:block">
+                <Avatar className="h-24 w-24 border-4 border-navy-300">
+                  <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijeesh" />
+                  <AvatarFallback>AHB</AvatarFallback>
+                </Avatar>
+              </div>
+              <div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-4">
+                  A H BRIJEESH
+                </h1>
+                <h2 className="text-xl md:text-2xl font-medium text-navy-600 mb-6">
+                  Software Engineer • Machine Learning Enthusiast
+                </h2>
+              </div>
+            </div>
+            
             <p className="text-lg text-navy-800 mb-8 max-w-2xl">
               Enthusiastic entry-level professional seeking a role as Software Engineer or Machine Learning Engineer. 
               Eager to contribute to innovative projects and collaborate with cross-functional teams, 
@@ -45,15 +57,21 @@ const HeroSection = () => {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-navy-300 to-navy-500 transform rotate-3 scale-105 opacity-30 blur-sm"></div>
               <div className="rounded-2xl bg-white p-6 shadow-lg relative overflow-hidden border border-navy-100">
                 <div className="flex flex-col space-y-4">
+                  <div className="sm:hidden flex justify-center mb-4">
+                    <Avatar className="h-24 w-24 border-4 border-navy-300">
+                      <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijeesh" />
+                      <AvatarFallback>AHB</AvatarFallback>
+                    </Avatar>
+                  </div>
                   <div className="flex items-center space-x-3">
                     <div className="bg-navy-100 p-3 rounded-full">
-                      <span className="text-navy-700 font-semibold">Location</span>
+                      <MapPin className="h-5 w-5 text-navy-700" />
                     </div>
                     <span className="text-navy-800">Kanyakumari, Tamil Nadu, India, 629151</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="bg-navy-100 p-3 rounded-full">
-                      <span className="text-navy-700 font-semibold">Email</span>
+                      <Mail className="h-5 w-5 text-navy-700" />
                     </div>
                     <a href="mailto:ahbrijeesh2004@gmail.com" className="text-navy-800 hover:text-navy-600">
                       ahbrijeesh2004@gmail.com
@@ -61,19 +79,19 @@ const HeroSection = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="bg-navy-100 p-3 rounded-full">
-                      <span className="text-navy-700 font-semibold">Phone</span>
+                      <Phone className="h-5 w-5 text-navy-700" />
                     </div>
                     <span className="text-navy-800">+91 6384665931</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="bg-navy-100 p-3 rounded-full">
-                      <span className="text-navy-700 font-semibold">Education</span>
+                      <GraduationCap className="h-5 w-5 text-navy-700" />
                     </div>
                     <span className="text-navy-800">B.E. CSE, Rajiv Gandhi College of Engineering</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="bg-navy-100 p-3 rounded-full">
-                      <span className="text-navy-700 font-semibold">CGPA</span>
+                      <Award className="h-5 w-5 text-navy-700" />
                     </div>
                     <span className="text-navy-800">8.2 (up to sixth semester)</span>
                   </div>
