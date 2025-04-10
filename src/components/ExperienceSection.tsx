@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calendar, CheckCircle, Briefcase } from 'lucide-react';
+import { Calendar, CheckCircle, Briefcase, Code } from 'lucide-react';
 
 const ExperienceSection = () => {
   const experiences = [
@@ -32,7 +32,10 @@ const ExperienceSection = () => {
       company: "",
       period: "",
       description: [
-        "Completed virtual job simulations in various industry-led scenarios, applying Python, Deep Learning, NLP, Computer Vision, and Data Visualization to solve real-world challenges.",
+        {
+          type: "headline",
+          content: "Completed virtual job simulations in various industry-led scenarios, applying Python, Deep Learning, NLP, Computer Vision, and Data Visualization to solve real-world challenges."
+        },
         "J.P. Morgan: Software Engineering",
         "Cognizant: Artificial Intelligence",
         "Accenture: Data Analytics",
@@ -73,10 +76,16 @@ const ExperienceSection = () => {
 
                 <div className="space-y-3">
                   {exp.description.map((item, i) => (
-                    <div key={i} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-navy-600 mr-3 mt-1 flex-shrink-0" />
-                      <p className="text-navy-800">{item}</p>
-                    </div>
+                    typeof item === 'object' && item.type === 'headline' ? (
+                      <div key={i} className="my-4 p-4 bg-gradient-to-r from-navy-100 to-navy-50 rounded-lg border-l-4 border-navy-500 animate-fade-in">
+                        <p className="text-navy-800 font-medium italic leading-relaxed">{item.content}</p>
+                      </div>
+                    ) : (
+                      <div key={i} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-navy-600 mr-3 mt-1 flex-shrink-0" />
+                        <p className="text-navy-800">{item}</p>
+                      </div>
+                    )
                   ))}
                 </div>
               </div>
