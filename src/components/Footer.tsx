@@ -34,10 +34,10 @@ const Footer = () => {
 
           <div className="flex items-center mb-4">
             <Avatar className="h-16 w-16 border-2 border-navy-300 mr-3">
-              <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijeesh" />
+              <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijesh" />
               <AvatarFallback>AHB</AvatarFallback>
             </Avatar>
-            <h2 className="text-2xl font-bold">A H BRIJEESH</h2>
+            <h2 className="text-2xl font-bold">A H BRIJESH</h2>
           </div>
           
           <div className="flex space-x-6 mb-6">
@@ -60,7 +60,7 @@ const Footer = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="mailto:ahbrijeesh2004@gmail.com"
+              href="mailto:ahbrijesh2004@gmail.com"
               className="hover:text-navy-300 transition-colors duration-300"
               aria-label="Email"
             >
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
           
           <div className="text-navy-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} A H Brijeesh. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} A H Brijesh. All rights reserved.</p>
           </div>
         </div>
       </div>

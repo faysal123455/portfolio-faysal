@@ -29,7 +29,7 @@ const Navbar = () => {
   const socialLinks = [
     { name: 'Github', href: 'https://github.com/AHBRIJESH', icon: <Github className="h-5 w-5" /> },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/', icon: <Linkedin className="h-5 w-5" /> },
-    { name: 'Email', href: 'mailto:ahbrijeesh2004@gmail.com', icon: <Mail className="h-5 w-5" /> },
+    { name: 'Email', href: 'mailto:ahbrijesh2004@gmail.com', icon: <Mail className="h-5 w-5" /> },
   ];
 
   return (
@@ -44,11 +44,11 @@ const Navbar = () => {
           <div className="w-10 h-10 rounded-full overflow-hidden mr-2 border-2 border-navy-300">
             <img 
               src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" 
-              alt="A H Brijeesh" 
+              alt="A H Brijesh" 
               className="w-full h-full object-cover"
             />
           </div>
-          A H <span className="text-navy-600">BRIJEESH</span>
+          A H <span className="text-navy-600">BRIJESH</span>
         </a>
 
         {/* Desktop Navigation */}

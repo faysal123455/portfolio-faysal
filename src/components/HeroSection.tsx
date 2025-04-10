@@ -13,13 +13,13 @@ const HeroSection = () => {
             <div className="flex items-center mb-6">
               <div className="mr-4 hidden sm:block">
                 <Avatar className="h-24 w-24 border-4 border-navy-300">
-                  <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijeesh" />
+                  <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijesh" />
                   <AvatarFallback>AHB</AvatarFallback>
                 </Avatar>
               </div>
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-4">
-                  A H BRIJEESH
+                  A H BRIJESH
                 </h1>
                 <h2 className="text-xl md:text-2xl font-medium text-navy-600 mb-6">
                   Software Engineer • Machine Learning Enthusiast
@@ -34,7 +34,7 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button className="bg-navy-700 hover:bg-navy-800 text-white">
-                <a href="/lovable-uploads/5828a445-9e0f-4348-b261-8cfcc3590ce4.png" download="A_H_Brijeesh_Resume.png">
+                <a href="/lovable-uploads/5828a445-9e0f-4348-b261-8cfcc3590ce4.png" download="A_H_Brijesh_Resume.png">
                   Download Resume
                 </a>
               </Button>
@@ -59,7 +59,7 @@ const HeroSection = () => {
                 <div className="flex flex-col space-y-4">
                   <div className="sm:hidden flex justify-center mb-4">
                     <Avatar className="h-24 w-24 border-4 border-navy-300">
-                      <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijeesh" />
+                      <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijesh" />
                       <AvatarFallback>AHB</AvatarFallback>
                     </Avatar>
                   </div>
@@ -73,8 +73,8 @@ const HeroSection = () => {
                     <div className="bg-navy-100 p-3 rounded-full">
                       <Mail className="h-5 w-5 text-navy-700" />
                     </div>
-                    <a href="mailto:ahbrijeesh2004@gmail.com" className="text-navy-800 hover:text-navy-600">
-                      ahbrijeesh2004@gmail.com
+                    <a href="mailto:ahbrijesh2004@gmail.com" className="text-navy-800 hover:text-navy-600">
+                      ahbrijesh2004@gmail.com
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
