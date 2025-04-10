@@ -1,24 +1,51 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Mail, Phone, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/components/ui/use-toast';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    
-    // Reset form
-    (e.target as HTMLFormElement).reset();
+    try {
+      const formData = new FormData(e.currentTarget);
+      
+      // Use formsubmit.co service to send email
+      const response = await fetch('https://formsubmit.co/ahbrijesh2004@gmail.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+      
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        // Reset form
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -51,8 +78,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium text-navy-900 mb-1">Email</h4>
-                  <a href="mailto:ahbrijeesh2004@gmail.com" className="text-navy-700 hover:text-navy-500 transition-colors">
-                    ahbrijeesh2004@gmail.com
+                  <a href="mailto:ahbrijesh2004@gmail.com" className="text-navy-700 hover:text-navy-500 transition-colors">
+                    ahbrijesh2004@gmail.com
                   </a>
                 </div>
               </div>
@@ -96,13 +123,19 @@ const ContactSection = () => {
           <div className="bg-white rounded-lg shadow-md p-6 border border-navy-100">
             <h3 className="text-2xl font-bold text-navy-800 mb-6">Send a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4" action="https://formsubmit.co/ahbrijesh2004@gmail.com" method="POST">
+              {/* Hidden inputs for formsubmit.co configuration */}
+              <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value={window.location.href} />
+              
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-navy-700 mb-1">
                   Your Name
                 </label>
                 <Input 
                   id="name" 
+                  name="name"
                   placeholder="Enter your name" 
                   required 
                   className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
@@ -115,6 +148,7 @@ const ContactSection = () => {
                 </label>
                 <Input 
                   id="email" 
+                  name="email"
                   type="email" 
                   placeholder="Enter your email" 
                   required 
@@ -128,6 +162,7 @@ const ContactSection = () => {
                 </label>
                 <Input 
                   id="subject" 
+                  name="subject"
                   placeholder="Enter subject" 
                   required 
                   className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
@@ -140,6 +175,7 @@ const ContactSection = () => {
                 </label>
                 <Textarea 
                   id="message" 
+                  name="message"
                   placeholder="Enter your message" 
                   rows={4} 
                   required 
@@ -147,8 +183,12 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button type="submit" className="w-full bg-navy-700 hover:bg-navy-800 text-white">
-                Send Message
+              <Button 
+                type="submit" 
+                className="w-full bg-navy-700 hover:bg-navy-800 text-white"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
