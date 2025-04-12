@@ -1,8 +1,19 @@
-
-import React, { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Github, Linkedin, Mail, Home, GraduationCap, Briefcase, FolderKanban, Medal, Contact } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import {
+  Menu,
+  X,
+  Github,
+  Linkedin,
+  Mail,
+  Home,
+  GraduationCap,
+  Briefcase,
+  FolderKanban,
+  Medal,
+  Contact,
+} from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,42 +24,79 @@ const Navbar = () => {
       setScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about', icon: <Home className="h-4 w-4 mr-1" /> },
-    { name: 'Education', href: '#education', icon: <GraduationCap className="h-4 w-4 mr-1" /> },
-    { name: 'Experience', href: '#experience', icon: <Briefcase className="h-4 w-4 mr-1" /> },
-    { name: 'Projects', href: '#projects', icon: <FolderKanban className="h-4 w-4 mr-1" /> },
-    { name: 'Skills', href: '#skills', icon: <Medal className="h-4 w-4 mr-1" /> },
-    { name: 'Contact', href: '#contact', icon: <Contact className="h-4 w-4 mr-1" /> },
+    { name: "About", href: "#about", icon: <Home className="h-4 w-4 mr-1" /> },
+    {
+      name: "Education",
+      href: "#education",
+      icon: <GraduationCap className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Experience",
+      href: "#experience",
+      icon: <Briefcase className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Projects",
+      href: "#projects",
+      icon: <FolderKanban className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Skills",
+      href: "#skills",
+      icon: <Medal className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Contact",
+      href: "#contact",
+      icon: <Contact className="h-4 w-4 mr-1" />,
+    },
   ];
 
   const socialLinks = [
-    { name: 'Github', href: 'https://github.com/AHBRIJESH', icon: <Github className="h-5 w-5" /> },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/', icon: <Linkedin className="h-5 w-5" /> },
-    { name: 'Email', href: 'mailto:ahbrijesh2004@gmail.com', icon: <Mail className="h-5 w-5" /> },
+    {
+      name: "Github",
+      href: "https://github.com/AHBRIJESH",
+      icon: <Github className="h-5 w-5" />,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/",
+      icon: <Linkedin className="h-5 w-5" />,
+    },
+    {
+      name: "Email",
+      href: "mailto:ahbrijesh2004@gmail.com",
+      icon: <Mail className="h-5 w-5" />,
+    },
   ];
 
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled
+          ? "bg-white/90 backdrop-blur-md shadow-md py-2"
+          : "bg-transparent py-4"
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" className="text-xl font-bold text-navy-800 flex items-center">
+        <a
+          href="#"
+          className="text-xl font-bold text-navy-800 flex items-center"
+        >
           <div className="w-10 h-10 rounded-full overflow-hidden mr-2 border-2 border-navy-300">
-            <img 
-              src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" 
-              alt="A H Brijesh" 
+            <img
+              src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png"
+              alt="A H Brijesh"
               className="w-full h-full object-cover"
             />
           </div>
-          A H <span className="text-navy-600">BRIJESH</span>
+          <span className="text-navy-800">A H BRIJESH</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -99,8 +147,10 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         className={cn(
-          'fixed top-14 inset-x-0 bg-white/90 backdrop-blur-md shadow-md px-4 py-4 md:hidden transition-all duration-300 ease-in-out',
-          isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+          "fixed top-14 inset-x-0 bg-white/90 backdrop-blur-md shadow-md px-4 py-4 md:hidden transition-all duration-300 ease-in-out",
+          isOpen
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-4 pointer-events-none"
         )}
       >
         <div className="flex flex-col space-y-4">

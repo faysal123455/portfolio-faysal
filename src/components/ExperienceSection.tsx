@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Calendar, CheckCircle, Briefcase, Code } from 'lucide-react';
+import React from "react";
+import { Calendar, CheckCircle, Briefcase, Code } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
@@ -12,8 +11,8 @@ const ExperienceSection = () => {
         "Developed a Face Recognition-Based Attendance System using Flask, TensorFlow, CNN, Keras, and MySQL",
         "Achieved 97% accuracy, automating attendance tracking and reducing manual effort by 60%",
         "Enabled recognition of 5 individuals within 10 seconds, showcasing expertise in deep learning and problem-solving",
-        "Collaborated with team members to ensure the efficient delivery of the solution with a focus on user-centric design"
-      ]
+        "Collaborated with team members to ensure the efficient delivery of the solution with a focus on user-centric design",
+      ],
     },
     {
       title: "SAP ABAP INTERN | FORD MOTOR COMPANY",
@@ -24,47 +23,52 @@ const ExperienceSection = () => {
         "Applied ABAP OOP and data conversion techniques (RFC, LSMW, LTMC, BAPI) to enhance data accuracy for vehicle production workflows",
         "Contributed to RICEF development, optimizing SAP ABAP programming to improve data migration efficiency by 20%",
         "Ensured 100% data accuracy during migration, minimizing transition errors",
-        "Collaborated with cross-functional teams to deliver seamless and reliable SAP solutions"
-      ]
+        "Collaborated with cross-functional teams to deliver seamless and reliable SAP solutions",
+      ],
     },
     {
       title: "JOB SIMULATIONS",
-      company: "",
+      company:
+        "Completed virtual job simulations in various industry-led scenarios, applying Python, Deep Learning, NLP, Computer Vision, and Data Visualization to solve real-world challenges.",
       period: "",
       description: [
-        {
-          type: "headline",
-          content: "Completed virtual job simulations in various industry-led scenarios, applying Python, Deep Learning, NLP, Computer Vision, and Data Visualization to solve real-world challenges."
-        },
         "J.P. Morgan: Software Engineering",
         "Cognizant: Artificial Intelligence",
         "Accenture: Data Analytics",
         "British Airways: Data Science",
-        "Tata Group: Data Visualization"
-      ]
-    }
+        "Tata Group: Data Visualization",
+      ],
+    },
   ];
 
   return (
     <section id="experience" className="py-20 bg-navy-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold text-navy-900 mb-4">Professional Experience</h2>
+          <h2 className="text-3xl font-bold text-navy-900 mb-4">
+            Professional Experience
+          </h2>
           <div className="h-1 w-20 bg-navy-500 mx-auto rounded-full"></div>
-          <p className="text-navy-700 mt-6">Internships and professional projects that have shaped my skills</p>
+          <p className="text-navy-700 mt-6">
+            Internships and professional projects that have shaped my skills
+          </p>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-10">
           {experiences.map((exp, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden border border-navy-100 transition-transform duration-300 hover:transform hover:scale-[1.01]"
             >
               <div className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-6">
                   <div>
-                    <h3 className="text-xl font-bold text-navy-900">{exp.title}</h3>
-                    {exp.company && <p className="text-navy-600 mt-1">{exp.company}</p>}
+                    <h3 className="text-xl font-bold text-navy-900">
+                      {exp.title}
+                    </h3>
+                    {exp.company && (
+                      <p className="text-navy-600 mt-1">{exp.company}</p>
+                    )}
                   </div>
                   {exp.period && (
                     <div className="mt-2 md:mt-0 flex items-center bg-navy-50 px-4 py-2 rounded-full">
@@ -75,10 +79,15 @@ const ExperienceSection = () => {
                 </div>
 
                 <div className="space-y-3">
-                  {exp.description.map((item, i) => (
-                    typeof item === 'object' && item.type === 'headline' ? (
-                      <div key={i} className="my-4 p-4 bg-gradient-to-r from-navy-100 to-navy-50 rounded-lg border-l-4 border-navy-500 animate-fade-in">
-                        <p className="text-navy-800 font-medium italic leading-relaxed">{item.content}</p>
+                  {exp.description.map((item, i) =>
+                    typeof item === "object" && item.type === "headline" ? (
+                      <div
+                        key={i}
+                        className="my-4 p-4 bg-gradient-to-r from-navy-100 to-navy-50 rounded-lg border-l-4 border-navy-500 animate-fade-in"
+                      >
+                        <p className="text-navy-800 font-medium italic leading-relaxed">
+                          {item.content}
+                        </p>
                       </div>
                     ) : (
                       <div key={i} className="flex items-start">
@@ -86,7 +95,7 @@ const ExperienceSection = () => {
                         <p className="text-navy-800">{item}</p>
                       </div>
                     )
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
