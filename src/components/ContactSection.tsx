@@ -1,44 +1,56 @@
-
-import React, { useState } from 'react';
-import { MapPin, Mail, Phone, Github, Linkedin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import React, { useState } from "react";
+import { MapPin, Mail, Phone, Github, Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      const formData = new FormData(e.currentTarget);
       const form = e.currentTarget;
-      
-      // Submit the form directly for formsubmit.co processing
-      form.submit();
-      
-      // Since we're doing a full form submission, we'll show the success message
-      // but the page will likely navigate away based on _next configuration
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+      const formData = new FormData(form);
+
+      // Prepare manual submission to FormSubmit
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
       });
-      
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for your message. I'll get back to you soon.",
+          duration: 5000, // Show for 5 seconds
+        });
+
+        // Reset form after successful submission
+        form.reset();
+      } else {
+        throw new Error('Submission failed');
+      }
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error("Submission error:", error);
       toast({
-        title: "Error",
-        description: "Failed to send your message. Please try again later.",
+        title: "Message Sending Failed",
+        description: "Please try again or check your internet connection.",
         variant: "destructive",
+        duration: 5000, // Show for 5 seconds
       });
+    } finally {
       setIsSubmitting(false);
     }
   };
-  
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -120,7 +132,6 @@ const ContactSection = () => {
               action="https://formsubmit.co/ahbrijesh2004@gmail.com" 
               method="POST"
             >
-              {/* Hidden inputs for formsubmit.co configuration */}
               <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value={window.location.href} />
@@ -184,7 +195,7 @@ const ContactSection = () => {
                 className="w-full bg-navy-700 hover:bg-navy-800 text-white"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>
