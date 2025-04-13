@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Calendar, CheckCircle, Briefcase, Code } from "lucide-react";
 
@@ -78,24 +79,21 @@ const ExperienceSection = () => {
                   )}
                 </div>
 
+                {index === 2 && exp.company && (
+                  <div className="my-4 p-4 bg-gradient-to-r from-navy-100 to-navy-50 rounded-lg border-l-4 border-navy-500 animate-fade-in">
+                    <p className="text-navy-800 font-medium italic leading-relaxed">
+                      {exp.company}
+                    </p>
+                  </div>
+                )}
+
                 <div className="space-y-3">
-                  {exp.description.map((item, i) =>
-                    typeof item === "object" && item.type === "headline" ? (
-                      <div
-                        key={i}
-                        className="my-4 p-4 bg-gradient-to-r from-navy-100 to-navy-50 rounded-lg border-l-4 border-navy-500 animate-fade-in"
-                      >
-                        <p className="text-navy-800 font-medium italic leading-relaxed">
-                          {item.content}
-                        </p>
-                      </div>
-                    ) : (
-                      <div key={i} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-navy-600 mr-3 mt-1 flex-shrink-0" />
-                        <p className="text-navy-800">{item}</p>
-                      </div>
-                    )
-                  )}
+                  {exp.description.map((item, i) => (
+                    <div key={i} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-navy-600 mr-3 mt-1 flex-shrink-0" />
+                      <p className="text-navy-800">{item}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

@@ -16,26 +16,18 @@ const ContactSection = () => {
     
     try {
       const formData = new FormData(e.currentTarget);
+      const form = e.currentTarget;
       
-      // Use formsubmit.co service to send email
-      const response = await fetch('https://formsubmit.co/ahbrijesh2004@gmail.com', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json',
-        },
+      // Submit the form directly for formsubmit.co processing
+      form.submit();
+      
+      // Since we're doing a full form submission, we'll show the success message
+      // but the page will likely navigate away based on _next configuration
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
       });
       
-      if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
-        });
-        // Reset form
-        (e.target as HTMLFormElement).reset();
-      } else {
-        throw new Error('Failed to send message');
-      }
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
@@ -43,7 +35,6 @@ const ContactSection = () => {
         description: "Failed to send your message. Please try again later.",
         variant: "destructive",
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
@@ -123,7 +114,12 @@ const ContactSection = () => {
           <div className="bg-white rounded-lg shadow-md p-6 border border-navy-100">
             <h3 className="text-2xl font-bold text-navy-800 mb-6">Send a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-4" action="https://formsubmit.co/ahbrijesh2004@gmail.com" method="POST">
+            <form 
+              onSubmit={handleSubmit} 
+              className="space-y-4" 
+              action="https://formsubmit.co/ahbrijesh2004@gmail.com" 
+              method="POST"
+            >
               {/* Hidden inputs for formsubmit.co configuration */}
               <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
               <input type="hidden" name="_captcha" value="false" />
