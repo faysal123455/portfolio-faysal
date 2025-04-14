@@ -1,9 +1,7 @@
-
 import React from 'react';
-import { Code, Brain, Smile, MessageSquare, Layers, Github, ExternalLink } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Code, Brain, Smile, MessageSquare, Layers } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 
 const ProjectsSection = () => {
   const projects = [
@@ -63,35 +61,8 @@ const ProjectsSection = () => {
                   className="border border-navy-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full cursor-pointer"
                 >
                   <CardHeader className="pb-2">
-                    <div className="mb-3 flex justify-between items-center">
-                      {project.icon}
-                      {project.github && (
-                        <a 
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-navy-600 hover:text-navy-800 transition-colors"
-                          aria-label="View GitHub Repository"
-                        >
-                          <Github className="h-5 w-5" />
-                        </a>
-                      )}
-                    </div>
-                    <CardTitle className="text-navy-900">
-                      {project.github ? (
-                        <a 
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-navy-600 transition-colors flex items-center gap-2"
-                        >
-                          {project.title}
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      ) : (
-                        project.title
-                      )}
-                    </CardTitle>
+                    <div className="mb-3">{project.icon}</div>
+                    <CardTitle className="text-navy-900">{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <CardDescription className="text-navy-700 text-sm mb-6">{project.description}</CardDescription>
@@ -103,26 +74,6 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                   </CardContent>
-                  {project.github && (
-                    <CardFooter className="pt-4">
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="w-full text-navy-700 border-navy-200 hover:bg-navy-50"
-                        asChild
-                      >
-                        <a 
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2"
-                        >
-                          <Github className="h-4 w-4" />
-                          View Repository
-                        </a>
-                      </Button>
-                    </CardFooter>
-                  )}
                 </Card>
               </a>
             ) : (
@@ -131,35 +82,8 @@ const ProjectsSection = () => {
                 className="border border-navy-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full"
               >
                 <CardHeader className="pb-2">
-                  <div className="mb-3 flex justify-between items-center">
-                    {project.icon}
-                    {project.github && (
-                      <a 
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-navy-600 hover:text-navy-800 transition-colors"
-                        aria-label="View GitHub Repository"
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    )}
-                  </div>
-                  <CardTitle className="text-navy-900">
-                    {project.github ? (
-                      <a 
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-navy-600 transition-colors flex items-center gap-2"
-                      >
-                        {project.title}
-                        <ExternalLink className="h-4 w-4" />
-                      </a>
-                    ) : (
-                      project.title
-                    )}
-                  </CardTitle>
+                  <div className="mb-3">{project.icon}</div>
+                  <CardTitle className="text-navy-900">{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
                   <CardDescription className="text-navy-700 text-sm mb-6">{project.description}</CardDescription>
@@ -171,26 +95,6 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                 </CardContent>
-                {project.github && (
-                  <CardFooter className="pt-4">
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="w-full text-navy-700 border-navy-200 hover:bg-navy-50"
-                      asChild
-                    >
-                      <a 
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2"
-                      >
-                        <Github className="h-4 w-4" />
-                        View Repository
-                      </a>
-                    </Button>
-                  </CardFooter>
-                )}
               </Card>
             )
           ))}
