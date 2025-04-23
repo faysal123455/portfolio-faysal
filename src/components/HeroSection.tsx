@@ -48,10 +48,7 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button className="bg-navy-700 hover:bg-navy-800 text-white">
-                <a
-                  href="/lovable-uploads/5828a445-9e0f-4348-b261-8cfcc3590ce4.png"
-                  download="A_H_Brijesh_Resume.png"
-                >
+                <a href="/lovable-uploads/Brijesh.pdf" download="Brijesh.pdf">
                   Download Resume
                 </a>
               </Button>

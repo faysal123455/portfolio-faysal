@@ -1,12 +1,11 @@
-
 import React from "react";
 import { Calendar, CheckCircle, Briefcase, Code } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "AI INTERN | AICTE INNOVATIVE INTERN",
-      company: "",
+      title: "AI INTERN",
+      company: "AICTE INNOVATIVE INTERN",
       period: "AUGUST 2024 – NOVEMBER 2024",
       description: [
         "Developed a Face Recognition-Based Attendance System using Flask, TensorFlow, CNN, Keras, and MySQL",
@@ -16,8 +15,8 @@ const ExperienceSection = () => {
       ],
     },
     {
-      title: "SAP ABAP INTERN | FORD MOTOR COMPANY",
-      company: "",
+      title: "SAP ABAP INTERN",
+      company: "FORD MOTOR COMPANY",
       period: "JUNE 2024 – AUGUST 2024",
       description: [
         "Gained expertise in SAP ERP for the automotive sector, working on data migration and system optimization",
@@ -29,9 +28,6 @@ const ExperienceSection = () => {
     },
     {
       title: "JOB SIMULATIONS",
-      company:
-        "Completed virtual job simulations in various industry-led scenarios, applying Python, Deep Learning, NLP, Computer Vision, and Data Visualization to solve real-world challenges.",
-      period: "",
       description: [
         "J.P. Morgan: Software Engineering",
         "Cognizant: Artificial Intelligence",
@@ -39,6 +35,9 @@ const ExperienceSection = () => {
         "British Airways: Data Science",
         "Tata Group: Data Visualization",
       ],
+      company:
+        "Completed virtual job simulations in various industry-led scenarios, applying Python, Deep Learning, NLP, Computer Vision, and Data Visualization to solve real-world challenges.",
+      period: "",
     },
   ];
 
@@ -68,7 +67,7 @@ const ExperienceSection = () => {
                       {exp.title}
                     </h3>
                     {exp.company && (
-                      <p className="text-navy-600 mt-1">{exp.company}</p>
+                      <p className="text-navy-600 mt-2 ">{exp.company}</p>
                     )}
                   </div>
                   {exp.period && (
@@ -78,14 +77,6 @@ const ExperienceSection = () => {
                     </div>
                   )}
                 </div>
-
-                {index === 2 && exp.company && (
-                  <div className="my-4 p-4 bg-gradient-to-r from-navy-100 to-navy-50 rounded-lg border-l-4 border-navy-500 animate-fade-in">
-                    <p className="text-navy-800 font-medium italic leading-relaxed">
-                      {exp.company}
-                    </p>
-                  </div>
-                )}
 
                 <div className="space-y-3">
                   {exp.description.map((item, i) => (
