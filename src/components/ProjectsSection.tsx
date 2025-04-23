@@ -40,12 +40,12 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-gradient-to-b from-white to-navy-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl font-bold text-navy-900 mb-4">Projects</h2>
-          <div className="h-1 w-20 bg-navy-500 mx-auto rounded-full"></div>
-          <p className="text-navy-700 mt-6">Showcasing my work and technical accomplishments</p>
+        <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold text-navy-900 mb-4">Projects</h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-navy-400 to-navy-600 mx-auto rounded-full"></div>
+          <p className="text-navy-700 mt-6 text-lg">Showcasing my work and technical accomplishments</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -56,20 +56,26 @@ const ProjectsSection = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 key={index}
-                className="block hover:no-underline"
+                className="block transform hover:scale-[1.02] transition-all duration-300 hover:no-underline"
               >
-                <Card 
-                  className="border border-navy-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full cursor-pointer"
-                >
-                  <CardHeader className="pb-2">
-                    <div className="mb-3">{project.icon}</div>
-                    <CardTitle className="text-navy-900">{project.title}</CardTitle>
+                <Card className="h-full border border-navy-100 bg-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl">
+                  <CardHeader className="pb-2 space-y-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-navy-100 to-navy-200 rounded-xl p-2 flex items-center justify-center">
+                      {project.icon}
+                    </div>
+                    <CardTitle className="text-xl font-bold text-navy-900">{project.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex-grow">
-                    <CardDescription className="text-navy-700 text-sm mb-6">{project.description}</CardDescription>
+                  <CardContent className="space-y-6">
+                    <CardDescription className="text-navy-700 text-sm leading-relaxed">
+                      {project.description}
+                    </CardDescription>
                     <div className="flex flex-wrap gap-2">
                       {project.skills.map((skill, i) => (
-                        <Badge key={i} variant="outline" className="bg-navy-50 text-navy-700 border-navy-200">
+                        <Badge 
+                          key={i} 
+                          variant="outline" 
+                          className="bg-navy-50/50 text-navy-700 border-navy-200 backdrop-blur-sm font-medium"
+                        >
                           {skill}
                         </Badge>
                       ))}
@@ -80,17 +86,25 @@ const ProjectsSection = () => {
             ) : (
               <Card 
                 key={index}
-                className="border border-navy-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full"
+                className="h-full border border-navy-100 bg-white/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
               >
-                <CardHeader className="pb-2">
-                  <div className="mb-3">{project.icon}</div>
-                  <CardTitle className="text-navy-900">{project.title}</CardTitle>
+                <CardHeader className="pb-2 space-y-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-navy-100 to-navy-200 rounded-xl p-2 flex items-center justify-center">
+                    {project.icon}
+                  </div>
+                  <CardTitle className="text-xl font-bold text-navy-900">{project.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow">
-                  <CardDescription className="text-navy-700 text-sm mb-6">{project.description}</CardDescription>
+                <CardContent className="space-y-6">
+                  <CardDescription className="text-navy-700 text-sm leading-relaxed">
+                    {project.description}
+                  </CardDescription>
                   <div className="flex flex-wrap gap-2">
                     {project.skills.map((skill, i) => (
-                      <Badge key={i} variant="outline" className="bg-navy-50 text-navy-700 border-navy-200">
+                      <Badge 
+                        key={i} 
+                        variant="outline" 
+                        className="bg-navy-50/50 text-navy-700 border-navy-200 backdrop-blur-sm font-medium"
+                      >
                         {skill}
                       </Badge>
                     ))}
