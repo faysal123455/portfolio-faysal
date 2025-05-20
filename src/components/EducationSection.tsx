@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Book, Star, Users, Award } from 'lucide-react';
+import React from "react";
+import { Book, Star, Users, Award } from "lucide-react";
 
 const EducationSection = () => {
   return (
@@ -15,8 +14,12 @@ const EducationSection = () => {
           <div className="p-6 md:p-8">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
               <div>
-                <h3 className="text-xl font-bold text-navy-900">BE CSE | Rajiv Gandhi College of Engineering</h3>
-                <p className="text-navy-600 mt-1">Pursuing Bachelor's in Computer Science Engineering</p>
+                <h3 className="text-xl font-bold text-navy-900">
+                  BE CSE | Rajiv Gandhi College of Engineering
+                </h3>
+                <p className="text-navy-600 mt-1">
+                  Pursuing Bachelor's in Computer Science Engineering
+                </p>
               </div>
               <div className="mt-2 md:mt-0 bg-navy-50 px-4 py-2 rounded-full">
                 <p className="text-navy-700 font-medium">CGPA: 8.2</p>
@@ -29,7 +32,10 @@ const EducationSection = () => {
                   <Book className="h-5 w-5 text-navy-700" />
                 </div>
                 <div>
-                  <p className="text-navy-800">Completed the seventh semester (results pending) and currently in the eighth semester</p>
+                  <p className="text-navy-800">
+                    Completed the seventh semester and currently in the eighth
+                    semester
+                  </p>
                 </div>
               </div>
 
@@ -38,7 +44,10 @@ const EducationSection = () => {
                   <Star className="h-5 w-5 text-navy-700" />
                 </div>
                 <div>
-                  <p className="text-navy-800">Demonstrates strong academic performance with a focus on technical and analytical skills</p>
+                  <p className="text-navy-800">
+                    Demonstrates strong academic performance with a focus on
+                    technical and analytical skills
+                  </p>
                 </div>
               </div>
 
@@ -47,7 +56,10 @@ const EducationSection = () => {
                   <Users className="h-5 w-5 text-navy-700" />
                 </div>
                 <div>
-                  <p className="text-navy-800">Collaborates with peers and faculty on academic projects, group discussions, and research initiatives</p>
+                  <p className="text-navy-800">
+                    Collaborates with peers and faculty on academic projects,
+                    group discussions, and research initiatives
+                  </p>
                 </div>
               </div>
 
@@ -56,7 +68,11 @@ const EducationSection = () => {
                   <Award className="h-5 w-5 text-navy-700" />
                 </div>
                 <div>
-                  <p className="text-navy-800">Relevant coursework: Data Structures, Algorithms, Database Management, Machine Learning, Artificial Intelligence, Computer Networks</p>
+                  <p className="text-navy-800">
+                    Relevant coursework: Data Structures, Algorithms, Database
+                    Management, Machine Learning, Artificial Intelligence,
+                    Computer Networks
+                  </p>
                 </div>
               </div>
             </div>
