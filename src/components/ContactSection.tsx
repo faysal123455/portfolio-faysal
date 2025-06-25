@@ -166,6 +166,7 @@ const ContactSection = () => {
                   name="name"
                   placeholder="Enter your name"
                   required
+                  autoComplete="off"
                   className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
                 />
               </div>
@@ -183,6 +184,7 @@ const ContactSection = () => {
                   type="email"
                   placeholder="Enter your email"
                   required
+                  autoComplete="off"
                   className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
                 />
               </div>
@@ -199,6 +201,7 @@ const ContactSection = () => {
                   name="subject"
                   placeholder="Enter subject"
                   required
+                  autoComplete="off"
                   className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
                 />
               </div>
