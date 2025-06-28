@@ -1,23 +1,53 @@
-
-import React from 'react';
-import { Github, Linkedin, Mail, ArrowUp, Home, GraduationCap, Briefcase, FolderKanban, Medal, Contact } from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import React from "react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowUp,
+  Home,
+  GraduationCap,
+  Briefcase,
+  FolderKanban,
+  Medal,
+  Contact,
+} from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   const navItems = [
-    { name: 'About', href: '#about', icon: <Home className="h-4 w-4 mr-1" /> },
-    { name: 'Education', href: '#education', icon: <GraduationCap className="h-4 w-4 mr-1" /> },
-    { name: 'Experience', href: '#experience', icon: <Briefcase className="h-4 w-4 mr-1" /> },
-    { name: 'Projects', href: '#projects', icon: <FolderKanban className="h-4 w-4 mr-1" /> },
-    { name: 'Skills', href: '#skills', icon: <Medal className="h-4 w-4 mr-1" /> },
-    { name: 'Contact', href: '#contact', icon: <Contact className="h-4 w-4 mr-1" /> },
+    { name: "About", href: "#about", icon: <Home className="h-4 w-4 mr-1" /> },
+    {
+      name: "Education",
+      href: "#education",
+      icon: <GraduationCap className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Experience",
+      href: "#experience",
+      icon: <Briefcase className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Projects",
+      href: "#projects",
+      icon: <FolderKanban className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Skills",
+      href: "#skills",
+      icon: <Medal className="h-4 w-4 mr-1" />,
+    },
+    {
+      name: "Contact",
+      href: "#contact",
+      icon: <Contact className="h-4 w-4 mr-1" />,
+    },
   ];
 
   return (
@@ -34,12 +64,15 @@ const Footer = () => {
 
           <div className="flex items-center mb-4">
             <Avatar className="h-16 w-16 border-2 border-navy-300 mr-3">
-              <AvatarImage src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png" alt="A H Brijesh" />
+              <AvatarImage
+                src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png"
+                alt="A H Brijesh"
+              />
               <AvatarFallback>AHB</AvatarFallback>
             </Avatar>
             <h2 className="text-2xl font-bold">A H BRIJESH</h2>
           </div>
-          
+
           <div className="flex space-x-6 mb-6">
             <a
               href="https://github.com/AHBRIJESH"
@@ -67,12 +100,12 @@ const Footer = () => {
               <Mail className="h-6 w-6" />
             </a>
           </div>
-          
+
           <div className="flex flex-wrap justify-center space-x-4 md:space-x-6 text-navy-300 mb-8">
             {navItems.map((item) => (
-              <a 
+              <a
                 key={item.name}
-                href={item.href} 
+                href={item.href}
                 className="hover:text-white transition-colors duration-300 flex items-center mb-2"
               >
                 {item.icon}
@@ -80,9 +113,12 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          
+
           <div className="text-navy-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} A H Brijesh. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()} A H Brijesh. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </div>

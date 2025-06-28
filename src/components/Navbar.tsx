@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import {
   Menu,
   X,
@@ -80,23 +79,20 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md py-2"
-          : "bg-transparent py-4"
+          ? "bg-navy-800 backdrop-blur-md shadow-md py-2"
+          : "bg-navy-800 py-4"
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a
-          href="#"
-          className="text-xl font-bold text-navy-800 flex items-center"
-        >
-          <div className="w-10 h-10 rounded-full overflow-hidden mr-2 border-2 border-navy-300">
+        <a href="#" className="text-xl font-bold text-white flex items-center">
+          <div className="w-10 h-10 rounded-full overflow-hidden mr-2 border-2 border-white">
             <img
               src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png"
               alt="A H Brijesh"
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="text-navy-800">A H BRIJESH</span>
+          <span className="text-white">A H BRIJESH</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -106,7 +102,7 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-navy-800 hover:text-navy-600 font-medium transition-colors duration-200 flex items-center"
+                className="text-white hover:text-gray-300 font-medium transition-colors duration-200 flex items-center"
               >
                 {item.icon}
                 {item.name}
@@ -121,7 +117,7 @@ const Navbar = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-navy-100 text-navy-800 transition-colors duration-200"
+                className="p-2 rounded-full hover:bg-white/10 text-white transition-colors duration-200"
                 aria-label={link.name}
               >
                 {link.icon}
@@ -137,9 +133,9 @@ const Navbar = () => {
           aria-label="Toggle menu"
         >
           {isOpen ? (
-            <X className="h-6 w-6 text-navy-800" />
+            <X className="h-6 w-6 text-white" />
           ) : (
-            <Menu className="h-6 w-6 text-navy-800" />
+            <Menu className="h-6 w-6 text-white" />
           )}
         </button>
       </div>
@@ -147,7 +143,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <div
         className={cn(
-          "fixed top-14 inset-x-0 bg-white/90 backdrop-blur-md shadow-md px-4 py-4 md:hidden transition-all duration-300 ease-in-out",
+          "fixed top-14 inset-x-0 bg-navy-900 backdrop-blur-md shadow-md px-4 py-4 md:hidden transition-all duration-300 ease-in-out",
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"
@@ -158,7 +154,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-navy-800 hover:text-navy-600 font-medium py-2 transition-colors duration-200 flex items-center"
+              className="text-white hover:text-gray-300 font-medium py-2 transition-colors duration-200 flex items-center"
               onClick={() => setIsOpen(false)}
             >
               {item.icon}
@@ -173,7 +169,7 @@ const Navbar = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-navy-100 text-navy-800 transition-colors duration-200"
+                className="p-2 rounded-full hover:bg-white/10 text-white transition-colors duration-200"
                 aria-label={link.name}
               >
                 {link.icon}
