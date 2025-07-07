@@ -121,7 +121,7 @@ const HeroSection = () => {
                       <Award className="h-5 w-5 text-navy-700" />
                     </div>
                     <span className="text-navy-800">
-                      8.2 (up to seventh semester)
+                      8.2 CGPA at the end of Course
                     </span>
                   </div>
                 </div>
