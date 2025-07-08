@@ -1,6 +1,6 @@
 # 🌟 A H Brijesh — Portfolio
 
-[![Build](https://img.shields.io/badge/Build-passing-brightgreen.svg)](https://github.com/AHBRIJESH/Portfolio) [![React](https://img.shields.io/badge/React-2025-blue.svg?logo=react)](https://react.dev) [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-blueviolet?logo=tailwindcss)](https://tailwindcss.com) [![Deployed](https://img.shields.io/badge/Deployed-Yes-brightgreen.svg)](#-demo)
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/AHBRIJESH/Portfolio) [![React](https://img.shields.io/badge/React-2025-blue.svg?logo=react)](https://react.dev) [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-blueviolet?logo=tailwindcss)](https://tailwindcss.com) [![Deployed](https://img.shields.io/badge/Deployed-Yes-brightgreen.svg)](#-demo)
 
 Welcome to my personal portfolio website — a modern, responsive, and visually appealing showcase of my **skills**, **projects**, and **professional journey**.
 
