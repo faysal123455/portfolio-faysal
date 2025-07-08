@@ -1,73 +1,106 @@
-# Welcome to your Lovable project
+# 🌟 A H Brijesh — Portfolio
 
-## Project info
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/AHBRIJESH/Portfolio) [![React](https://img.shields.io/badge/React-2023-blue.svg?logo=react)](https://react.dev) [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-blueviolet?logo=tailwindcss)](https://tailwindcss.com) [![Deployed](https://img.shields.io/badge/Deployed-Yes-brightgreen.svg)](#-demo)
 
-**URL**: https://lovable.dev/projects/406e5116-b4b8-4f35-b7bd-3fdb3c38c9c2
+Welcome to my personal portfolio website — a modern, responsive, and visually appealing showcase of my **skills**, **projects**, and **professional journey**.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📄 Table of Contents
 
-**Use Lovable**
+- [🌐 Demo](#-demo)
+- [✨ Features](#-features)
+- [🛠️ Tech Stack](#-tech-stack)
+- [📋 Sections](#-sections)
+- [🚀 Setup & Installation](#-setup--installation)
+- [📞 Contact](#-contact)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/406e5116-b4b8-4f35-b7bd-3fdb3c38c9c2) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🌐 Demo
 
-**Use your preferred IDE**
+✨ [Live Demo](https://ahbrijesh.netlify.app/) ✨
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ✨ Features
 
-Follow these steps:
+✅ Responsive & Mobile-friendly  
+✅ Animated sections on scroll  
+✅ Clean, professional UI/UX  
+✅ Downloadable Resume  
+✅ Contact Form with email integration  
+✅ Highlighted Projects & Skills  
+✅ Smooth navigation & accessibility-friendly
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🛠️ Tech Stack
 
-# Step 3: Install the necessary dependencies.
-npm i
+| Technology           | Description           |
+| -------------------- | --------------------- |
+| ⚛️ **React**         | Front-end framework   |
+| 🎨 **TailwindCSS**   | Utility-first CSS     |
+| 🖋️ **Lucide-react**  | Modern icons          |
+| 🍃 **Framer Motion** | Animations            |
+| 📬 **FormSubmit**    | Contact form handling |
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 📋 Sections
+
+### 🚀 Hero
+
+- Intro with name, role, and profile photo.
+- Animated text & downloadable resume.
+
+### 🎓 Education
+
+- Education details with CGPA and key highlights.
+
+### 👔 Experience
+
+- Internship & project experience with detailed contributions.
+
+### 🧪 Projects
+
+- A grid of projects with skills, description, and GitHub links.
+
+### 🛠️ Skills
+
+- Categorized technical skills with relevant tools & technologies.
+
+### 📬 Contact
+
+- Contact information & form to reach me directly.
+
+### 🧭 Navigation & Footer
+
+- Sticky navbar with smooth scrolling.
+- Footer with copyright.
+
+---
+
+## 🚀 Setup & Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/AHBRIJESH/Portfolio.git
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Run the dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📞 Contact
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+If you’d like to connect or collaborate:
 
-**Use GitHub Codespaces**
+📧 ahbrijesh2004@gmail.com
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🌐 [LinkedIn](https://www.linkedin.com/in/brijeshah/)
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/406e5116-b4b8-4f35-b7bd-3fdb3c38c9c2) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🐙 [GitHub](https://github.com/AHBRIJESH)
