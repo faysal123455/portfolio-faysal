@@ -1,5 +1,15 @@
 import React from "react";
-import { Code, Brain, Smile, MessageSquare, Layers } from "lucide-react";
+import {
+  Code,
+  Brain,
+  Smile,
+  MessageSquare,
+  Layers,
+  BriefcaseBusinessIcon,
+  Briefcase,
+  BriefcaseConveyorBelt,
+  LucideBriefcaseBusiness,
+} from "lucide-react";
 import {
   Card,
   CardContent,
@@ -13,9 +23,9 @@ import Animated from "./Animated";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Sentence Emotion Predictor",
+      title: "Emotion Predictor Model",
       description:
-        "Built an RNN-based NLP model to predict sentence emotions with 82% accuracy. Processes real-world conversational text, classifies emotions into categories like happy, sad, angry, etc., and integrates into chatbots or feedback systems to improve user engagement.",
+        "RNN-based NLP model to predict emotional tone from text inputs.",
       icon: <Smile className="h-8 w-8 text-navy-600" />,
       skills: ["Python", "NLP", "RNN", "TensorFlow", "Keras"],
       github: "https://github.com/AHBRIJESH/Sentence_Emotion_Predictor.git",
@@ -23,7 +33,7 @@ const ProjectsSection = () => {
     {
       title: "Handwriting Style Converter",
       description:
-        "Created a GAN-based system to convert handwriting styles in real-time with 89% accuracy. This tool enables documents to be written in personalized or historical handwriting styles, enhancing document design and offering creative expression in digital forms.",
+        "CNN-based model to classify handwritten digits with high accuracy.",
       icon: <Code className="h-8 w-8 text-navy-600" />,
       skills: ["Python", "GAN", "Computer Vision", "PyTorch"],
       github: "https://github.com/AHBRIJESH/Handwritten-Digit-Predection.git",
@@ -31,7 +41,7 @@ const ProjectsSection = () => {
     {
       title: "Face Recognition Auto Attendance System",
       description:
-        "Developed a CNN-based AI system for automatic attendance tracking in enterprises. Integrated Flask and MySQL to log users efficiently, reducing manual effort by 60% and achieving 87% recognition accuracy. Features include dashboard analytics and real-time monitoring.",
+        "Real-time attendance system using CNN-based face recognition and a MySQL database.",
       icon: <Layers className="h-8 w-8 text-navy-600" />,
       skills: ["Python", "CNN", "Flask", "MySQL", "TensorFlow"],
       github:
@@ -40,7 +50,7 @@ const ProjectsSection = () => {
     {
       title: "Academic Grade Predictor",
       description:
-        "Built a machine learning model to predict academic grades based on study patterns, attendance, and participation. Achieved 92% accuracy and assists educators in tailoring interventions. Provides detailed performance reports and identifies at-risk students early.",
+        "ML model that predicts student scores >90% from study habits, sleep, and handwriting.",
       icon: <Brain className="h-8 w-8 text-navy-600" />,
       skills: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"],
       github: "https://github.com/AHBRIJESH/Academic_Grade_Predictor.git",
@@ -48,10 +58,18 @@ const ProjectsSection = () => {
     {
       title: "Suicidal Prevention Chatbot",
       description:
-        "Developing an AI-driven mental health chatbot that detects distress signals and responds empathetically. Uses NLP and Seq2Seq to analyze conversations, offering support and escalating to professionals if necessary. Includes sentiment tracking and anonymized reports.",
+        "AI chatbot that detects distress in conversations using Seq2Seq NLP and offers empathetic support.",
       icon: <MessageSquare className="h-8 w-8 text-navy-600" />,
       skills: ["Python", "NLP", "Seq2Seq", "TensorFlow", "Mental Health"],
       github: "https://github.com/AHBRIJESH/Sucide_Mitigation_Chatbot.git",
+    },
+    {
+      title: "Portfolio Website",
+      description:
+        "A personal portfolio website showcasing my skills, projects, and contact information.",
+      icon: <LucideBriefcaseBusiness className="h-8 w-8 text-navy-600" />,
+      skills: ["React", "Javascript", "Netlify", "TailwindCSS"],
+      github: "https://github.com/AHBRIJESH/Portfolio",
     },
   ];
 
