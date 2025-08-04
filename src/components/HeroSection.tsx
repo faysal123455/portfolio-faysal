@@ -44,9 +44,10 @@ const HeroSection = () => {
 
             <Animated delay={150} direction="up">
               <p className="text-lg text-navy-800 mb-8 max-w-2xl">
-                Actuellement en Master Cybersécurité & Cloud Computing, je suis passionné par les environnements techniques,
-                l'automatisation (Ansible, Terraform, CI/CD), la conteneurisation (Docker, Kubernetes) et les infrastructures cloud (OpenStack, VMware).
-                Je recherche une alternance à partir de septembre 2025 (1 sem. école / 3 sem. entreprise), pour contribuer à des projets concrets et innovants.
+                À la recherche d’une alternance à partir de la rentrée 2025 (rythme 1 semaine
+                en formation / 3 semaines en entreprise), afin de renforcer mes compétences
+                en automatisation, cloud computing, cybersécurité et CI/CD, au sein d’un
+                environnement stimulant et innovant.
               </p>
             </Animated>
 
@@ -95,48 +96,47 @@ const HeroSection = () => {
                       </Avatar>
                     </div>
 
-                    {[
-                      {
-                        icon: <MapPin className="h-5 w-5 text-navy-700" />,
-                        text: "Montreuil, Île-de-France, France",
-                      },
-                      {
-                        icon: <Mail className="h-5 w-5 text-navy-700" />,
-                        text: (
-                          <a
-                            href="mailto:faisaladnan700@gmail.com"
-                            className="text-navy-800 hover:text-navy-600"
-                          >
-                            faisaladnan700@gmail.com
-                          </a>
-                        ),
-                      },
-                      {
-                        icon: <Phone className="h-5 w-5 text-navy-700" />,
-                        text: "06 62 06 40 83",
-                      },
-                      {
-                        icon: <GraduationCap className="h-5 w-5 text-navy-700" />,
-                        text: "Bac+3/4 Admin. Systèmes DevOps – Simplon.co",
-                      },
-                      {
-                        icon: <Award className="h-5 w-5 text-navy-700" />,
-                        text: "En cours : Master Cybersécurité & Cloud",
-                      },
-                    ].map((item, idx) => (
-                      <Animated
-                        key={idx}
-                        delay={600 + idx * 100}
-                        direction="right"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <div className="bg-navy-100 p-3 rounded-full">
-                            {item.icon}
-                          </div>
-                          <span className="text-navy-800">{item.text}</span>
-                        </div>
-                      </Animated>
-                    ))}
+                {[
+  {
+    icon: <MapPin className="h-5 w-5 text-navy-700" />,
+    text: "Paris, Île-de-France, France",
+  },
+  {
+    icon: <Mail className="h-5 w-5 text-navy-700" />,
+    text: (
+      <a
+        href="mailto:faisaladnan700@gmail.com"
+        className="text-navy-800 hover:text-navy-600 transition-colors duration-300"
+      >
+        faisaladnan700@gmail.com
+      </a>
+    ),
+  },
+  {
+    icon: <Phone className="h-5 w-5 text-navy-700" />,
+    text: "06 62 06 40 83",
+  },
+  {
+    icon: <GraduationCap className="h-5 w-5 text-navy-700" />,
+    text: "Bac+3/4 Admin. Systèmes DevOps – Simplon.co",
+  },
+  {
+    icon: <Award className="h-5 w-5 text-navy-700" />,
+    text: "En cours : Master Cybersécurité & Cloud",
+  },
+].map((item, idx) => (
+  <div
+    key={idx}
+    className="flex items-center space-x-3 opacity-0 animate-fade-slide-in"
+    style={{ animationDelay: `${0.5 + idx * 0.2}s`, animationFillMode: "forwards" }}
+  >
+    <div className="bg-navy-100 p-3 rounded-full">
+      {item.icon}
+    </div>
+    <span className="text-navy-800">{item.text}</span>
+  </div>
+))}
+
                   </div>
                 </div>
               </div>

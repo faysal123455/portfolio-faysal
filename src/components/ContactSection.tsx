@@ -77,7 +77,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium text-navy-900 mb-1">Adresse</h4>
                     <p className="text-navy-700">
-                      Montreuil, Île-de-France, France
+                      Paris, Île-de-France, France
                     </p>
                   </div>
                 </div>

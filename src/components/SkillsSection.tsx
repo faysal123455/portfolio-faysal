@@ -6,6 +6,9 @@ import {
   Code2,
   Layers,
   Settings2,
+  Paintbrush2,
+  Database,
+  ShieldCheck,
   ChevronRight,
 } from "lucide-react";
 import Animated from "./Animated";
@@ -18,44 +21,100 @@ const SkillsSection = () => {
       skills: [
         "Azure (NSG, RG, Load Balancer, Auto-scaling)",
         "VMware",
-        "MicroStack (OpenStack)",
         "Vagrant",
         "Incus (LXC)",
+        "MicroStack (OpenStack)",
+        "OpenStack Horizon",
       ],
     },
     {
-      title: "Infrastructure & DevOps",
+      title: "Conteneurisation & Orchestration",
       icon: <Server className="h-8 w-8 text-navy-600" />,
       skills: [
         "Docker & Docker Compose",
         "Kubernetes (k3s, Helm)",
-        "Ansible",
-        "Terraform (IaC)",
-        "CI/CD (GitHub Actions, GitLab CI, Jenkins, ArgoCD)",
+        "Docker Swarm",
+        "Rancher",
+        "Portainer",
+        "Redis",
       ],
     },
     {
-      title: "Scripting & Développement",
+      title: "Infrastructure as Code & CI/CD",
+      icon: <Settings2 className="h-8 w-8 text-navy-600" />,
+      skills: [
+        "Terraform (IaC)",
+        "Ansible",
+        "Jenkins",
+        "GitHub Actions, GitLab CI, Bitbucket Pipelines",
+        "ArgoCD",
+      ],
+    },
+    {
+      title: "Langages & Développement",
       icon: <Code2 className="h-8 w-8 text-navy-600" />,
-      skills: ["Bash", "Python", "PowerShell", "FastAPI", "Node.js"],
+      skills: [
+        "Bash",
+        "Python",
+        "PowerShell",
+        "Node.js",
+        "FastAPI",
+        "API REST",
+      ],
+    },
+    {
+      title: "Front-End",
+      icon: <Paintbrush2 className="h-8 w-8 text-navy-600" />,
+      skills: [
+        "HTML / CSS / Sass",
+        "JavaScript / TypeScript",
+        "React.js",
+        "Angular",
+        "Bootstrap",
+      ],
+    },
+    {
+      title: "Back-End & Bases de Données",
+      icon: <Database className="h-8 w-8 text-navy-600" />,
+      skills: [
+        "Node.js",
+        "MySQL",
+        "API REST",
+      ],
     },
     {
       title: "Outils & Supervision",
       icon: <Layers className="h-8 w-8 text-navy-600" />,
       skills: [
         "Linux (Ubuntu, Debian)",
-        "Git & GitHub / GitLab",
-        "Prometheus & Grafana",
+        "GitHub / GitLab / Bitbucket",
+        "Prometheus",
+        "Grafana",
+        "Node Exporter",
+        "AlertManager",
         "Zabbix",
-        "Vault, Portainer, Locky",
+        "Vault",
+        "Locky",
       ],
     },
     {
-      title: "Méthodologies & Gestion",
-      icon: <Settings2 className="h-8 w-8 text-navy-600" />,
+      title: "Sécurité & Accès",
+      icon: <ShieldCheck className="h-8 w-8 text-navy-600" />,
+      skills: [
+        "UFW (pare-feu Ubuntu)",
+        "Configuration SSH sécurisée (désactivation root, restriction des accès)",
+      ],
+    },
+    {
+      title: "Méthodologies & Outils de gestion",
+      icon: <Terminal className="h-8 w-8 text-navy-600" />,
       skills: [
         "Méthode Agile & SCRUM",
-        "Gestion de projet (Simplon Agile certifié)",
+        "Jira",
+        "Figma",
+        "Storybook",
+        "Illustrator & Photoshop",
+        "WordPress",
         "Rédaction de documentation technique",
         "Analyse et résolution d'incidents",
       ],
@@ -71,7 +130,7 @@ const SkillsSection = () => {
           </h2>
           <div className="h-1 w-20 bg-navy-500 mx-auto rounded-full"></div>
           <p className="text-navy-700 mt-6">
-            Technologies que je maîtrise et utilise dans mes projets DevOps & Cloud
+            Technologies que je maîtrise et utilise dans mes projets DevOps, Cloud et Développement Full Stack.
           </p>
         </div>
 

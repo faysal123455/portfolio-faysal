@@ -5,7 +5,7 @@ import Animated from "./Animated";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Administrateur Système DevOps (alternance)",
+      title: "Administrateur Système DevOps (stage)",
       company: "Ministère de l’Enseignement Supérieur • Supméca, Saint-Ouen",
       period: "Mars 2025 – Juin 2025",
       description: [
