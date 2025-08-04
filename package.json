@@ -1,16 +1,15 @@
 {
-  "homepage": "https://ahbrijesh.github.io/career-canvas-project",
-  "name": "vite_react_shadcn_ts",
+  "name": "portfolio-faysal",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "https://faysal123455.github.io/portfolio-faysal",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "postbuild": "cp dist/index.html dist/404.html",
-    "build:dev": "vite build --mode development",
-    "lint": "eslint .",
     "preview": "vite preview",
+    "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
