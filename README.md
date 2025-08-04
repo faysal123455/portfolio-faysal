@@ -1,106 +1,92 @@
-# 🌟 A H Brijesh — Portfolio
+# 🚀 Faysal SARKER — Portfolio
 
-[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/AHBRIJESH/Portfolio) [![React](https://img.shields.io/badge/React-2025-blue.svg?logo=react)](https://react.dev) [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-blueviolet?logo=tailwindcss)](https://tailwindcss.com) [![Deployed](https://img.shields.io/badge/Deployed-Yes-brightgreen.svg)](#-demo)
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](https://github.com/faysal123455/portfolio)  
+[![React](https://img.shields.io/badge/React-2025-blue.svg?logo=react)](https://react.dev)  
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-blueviolet?logo=tailwindcss)](https://tailwindcss.com)  
+[![Deployment](https://img.shields.io/badge/Deployed-Yes-green.svg)](#-live-demo)
 
-Welcome to my personal portfolio website — a modern, responsive, and visually appealing showcase of my **skills**, **projects**, and **professional journey**.
-
----
-
-## 📄 Table of Contents
-
-- [🌐 Demo](#-demo)
-- [✨ Features](#-features)
-- [🛠️ Tech Stack](#-tech-stack)
-- [📋 Sections](#-sections)
-- [🚀 Setup & Installation](#-setup--installation)
-- [📞 Contact](#-contact)
+Bienvenue sur mon portfolio personnel ! Un site responsive et épuré qui reflète mon parcours d’**étudiant en cybersécurité et ingénierie DevOps**, mes projets techniques, et mes compétences pratiques dans le Cloud, l’automatisation, l’infrastructure et bien plus.
 
 ---
 
-## 🌐 Demo
+## 📑 Sommaire
 
-✨ [Live Demo](https://ahbrijesh.netlify.app/) ✨
-
----
-
-## ✨ Features
-
-✅ Responsive & Mobile-friendly  
-✅ Animated sections on scroll  
-✅ Clean, professional UI/UX  
-✅ Downloadable Resume  
-✅ Contact Form with email integration  
-✅ Highlighted Projects & Skills  
-✅ Smooth navigation & accessibility-friendly
+- [🌐 Live Demo](#-live-demo)
+- [✨ Fonctionnalités](#-fonctionnalités)
+- [⚙️ Stack technique](#-stack-technique)
+- [📦 Contenu](#-contenu)
+- [🚀 Installation](#-installation)
+- [📬 Contact](#-contact)
 
 ---
 
-## 🛠️ Tech Stack
+## 🌐 Live Demo
 
-| Technology           | Description           |
-| -------------------- | --------------------- |
-| ⚛️ **React**         | Front-end framework   |
-| 🎨 **TailwindCSS**   | Utility-first CSS     |
-| 🖋️ **Lucide-react**  | Modern icons          |
-| 🍃 **Framer Motion** | Animations            |
-| 📬 **FormSubmit**    | Contact form handling |
+👉 [Voir le site en ligne](https://faysal-portfolio.netlify.app) (remplace par ton lien Netlify ou autre)
 
 ---
 
-## 📋 Sections
+## ✨ Fonctionnalités
 
-### 🚀 Hero
+✅ Interface moderne & responsive  
+✅ Sections animées (Framer Motion)  
+✅ Formulaire de contact avec intégration email  
+✅ CV téléchargeable  
+✅ Navigation fluide & accessibilité  
+✅ Projets techniques avec lien GitHub  
+✅ Stack DevOps/Cloud affichée proprement
 
-- Intro with name, role, and profile photo.
-- Animated text & downloadable resume.
+---
 
-### 🎓 Education
+## ⚙️ Stack technique
 
-- Education details with CGPA and key highlights.
+| Technologie        | Utilisation                    |
+|--------------------|-------------------------------|
+| ⚛️ **React.js**    | Framework Front-End            |
+| 🌬️ **TailwindCSS**| Design responsive              |
+| 💫 **Framer Motion** | Animations légères & fluides  |
+| 📦 **Lucide-react** | Icônes modernes                |
+| 📬 **FormSubmit**  | Traitement du formulaire       |
 
-### 👔 Experience
+---
 
-- Internship & project experience with detailed contributions.
+## 📦 Contenu
 
-### 🧪 Projects
+### 👋 Accueil
 
-- A grid of projects with skills, description, and GitHub links.
+- Présentation, photo pro, fonction et résumé.
 
-### 🛠️ Skills
+### 🎓 Formation
 
-- Categorized technical skills with relevant tools & technologies.
+- Parcours éducatif (Simplon.co, Master en cybersécurité et Cloud).
+
+### 💼 Expériences
+
+- Alternance, projets DevOps, et stages détaillés.
+
+### 🧪 Projets
+
+- Démonstrations techniques (CI/CD, Ansible, Docker, Monitoring, etc.).
+
+### ⚙️ Compétences
+
+- Outils Cloud, DevOps, scripting, monitoring, containerisation...
 
 ### 📬 Contact
 
-- Contact information & form to reach me directly.
-
-### 🧭 Navigation & Footer
-
-- Sticky navbar with smooth scrolling.
-- Footer with copyright.
+- Coordonnées + formulaire direct.
 
 ---
 
-## 🚀 Setup & Installation
+## 🚀 Installation locale
 
 ```bash
-# Clone the repo
-git clone https://github.com/AHBRIJESH/Portfolio.git
-cd Portfolio
+# Cloner le dépôt
+git clone https://github.com/faysal123455/portfolio.git
+cd portfolio
 
-# Install dependencies
+# Installer les dépendances
 npm install
 
-# Run the dev server
+# Lancer le serveur de développement
 npm run dev
-```
-
-## 📞 Contact
-
-If you’d like to connect or collaborate:
-
-📧 ahbrijesh2004@gmail.com
-
-🌐 [LinkedIn](https://www.linkedin.com/in/brijeshah/)
-
-🐙 [GitHub](https://github.com/AHBRIJESH)

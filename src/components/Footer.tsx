@@ -65,17 +65,17 @@ const Footer = () => {
           <div className="flex items-center mb-4">
             <Avatar className="h-16 w-16 border-2 border-navy-300 mr-3">
               <AvatarImage
-                src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png"
-                alt="A H Brijesh"
+                src="/public/lovable-uploads/professional_photo_faysal.png" // 💡 Remplace par ton image réelle dans /public
+                alt="Faysal Sarker"
               />
-              <AvatarFallback>AHB</AvatarFallback>
+              <AvatarFallback>FS</AvatarFallback>
             </Avatar>
-            <h2 className="text-2xl font-bold">A H BRIJESH</h2>
+            <h2 className="text-2xl font-bold">Faysal SARKER</h2>
           </div>
 
           <div className="flex space-x-6 mb-6">
             <a
-              href="https://github.com/AHBRIJESH"
+              href="https://github.com/faysal123455"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-navy-300 transition-colors duration-300"
@@ -84,7 +84,7 @@ const Footer = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/"
+              href="https://www.linkedin.com/in/sarker-faysal-05066521"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-navy-300 transition-colors duration-300"
@@ -93,7 +93,7 @@ const Footer = () => {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="mailto:ahbrijesh2004@gmail.com"
+              href="mailto:faisaladnan700@gmail.com"
               className="hover:text-navy-300 transition-colors duration-300"
               aria-label="Email"
             >
@@ -116,8 +116,7 @@ const Footer = () => {
 
           <div className="text-navy-400 text-sm">
             <p>
-              &copy; {new Date().getFullYear()} A H Brijesh. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Faysal Sarker. Tous droits réservés.
             </p>
           </div>
         </div>

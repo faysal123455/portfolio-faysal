@@ -21,57 +21,57 @@ import { Badge } from "@/components/ui/badge";
 import Animated from "./Animated";
 
 const ProjectsSection = () => {
-  const projects = [
-    {
-      title: "Emotion Predictor Model",
-      description:
-        "RNN-based NLP model to predict emotional tone from text inputs.",
-      icon: <Smile className="h-8 w-8 text-navy-600" />,
-      skills: ["Python", "NLP", "RNN", "TensorFlow", "Keras"],
-      github: "https://github.com/AHBRIJESH/Sentence_Emotion_Predictor.git",
-    },
-    {
-      title: "Handwriting Style Converter",
-      description:
-        "CNN-based model to classify handwritten digits with high accuracy.",
-      icon: <Code className="h-8 w-8 text-navy-600" />,
-      skills: ["Python", "GAN", "Computer Vision", "PyTorch"],
-      github: "https://github.com/AHBRIJESH/Handwritten-Digit-Predection.git",
-    },
-    {
-      title: "Face Recognition Auto Attendance System",
-      description:
-        "Real-time attendance system using CNN-based face recognition and a MySQL database.",
-      icon: <Layers className="h-8 w-8 text-navy-600" />,
-      skills: ["Python", "CNN", "Flask", "MySQL", "TensorFlow"],
-      github:
-        "https://github.com/AHBRIJESH/Face_Recognition_Auto_Attendance_System.git",
-    },
-    {
-      title: "Academic Grade Predictor",
-      description:
-        "ML model that predicts student scores >90% from study habits, sleep, and handwriting.",
-      icon: <Brain className="h-8 w-8 text-navy-600" />,
-      skills: ["Python", "Machine Learning", "Data Analysis", "Scikit-learn"],
-      github: "https://github.com/AHBRIJESH/Academic_Grade_Predictor.git",
-    },
-    {
-      title: "Suicidal Prevention Chatbot",
-      description:
-        "AI chatbot that detects distress in conversations using Seq2Seq NLP and offers empathetic support.",
-      icon: <MessageSquare className="h-8 w-8 text-navy-600" />,
-      skills: ["Python", "NLP", "Seq2Seq", "TensorFlow", "Mental Health"],
-      github: "https://github.com/AHBRIJESH/Sucide_Mitigation_Chatbot.git",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "A personal portfolio website showcasing my skills, projects, and contact information.",
-      icon: <LucideBriefcaseBusiness className="h-8 w-8 text-navy-600" />,
-      skills: ["React", "Javascript", "Netlify", "TailwindCSS"],
-      github: "https://github.com/AHBRIJESH/Portfolio",
-    },
-  ];
+ const projects = [
+  {
+    title: "Demo DevOps Project",
+    description:
+      "Pipeline de déploiement automatisé avec GitHub Actions, Docker, Terraform. Projet de démonstration DevOps complet.",
+    icon: <Layers className="h-8 w-8 text-navy-600" />,
+    skills: ["GitHub Actions", "Docker", "Terraform", "CI/CD"],
+    github: "https://github.com/faysal123455/demo_devops",
+  },
+  {
+    title: "Advanced Terraform Infrastructure",
+    description:
+      "Projet avancé d'infrastructure as code avec Terraform (multi-environnement, modules, cloud-ready).",
+    icon: <Code className="h-8 w-8 text-navy-600" />,
+    skills: ["Terraform", "Cloud", "IaC", "Modular"],
+    github: "https://github.com/faysal123455/advanced-terraform-3099246",
+  },
+  {
+    title: "Next.js AI Chatbot",
+    description:
+      "Chatbot intelligent développé avec Next.js et intégration d’un modèle IA conversationnel.",
+    icon: <Smile className="h-8 w-8 text-navy-600" />,
+    skills: ["Next.js", "React", "AI", "JavaScript"],
+    github: "https://github.com/faysal123455/nextjs-ai-chatbot",
+  },
+  {
+    title: "Portfoliomatic",
+    description:
+      "Générateur de portfolio statique avec design réactif. Projet personnel déployé avec Vercel.",
+    icon: <Briefcase className="h-8 w-8 text-navy-600" />,
+    skills: ["React", "TailwindCSS", "Vercel", "TypeScript"],
+    github: "https://github.com/faysal123455/Portfoliomatic",
+  },
+  {
+    title: "DockerHub Automation",
+    description:
+      "Automatisation de la build et du push d’images Docker via pipeline CI/CD.",
+    icon: <Layers className="h-8 w-8 text-navy-600" />,
+    skills: ["Docker", "CI/CD", "GitHub Actions"],
+    github: "https://github.com/faysal123455/dockerhub",
+  },
+  {
+    title: "Jenkins Playground",
+    description:
+      "Tests et déploiements automatisés à l’aide de Jenkins dans différents pipelines de build.",
+    icon: <Code className="h-8 w-8 text-navy-600" />,
+    skills: ["Jenkins", "Pipeline", "DevOps", "Automation"],
+    github: "https://github.com/faysal123455/jenkins",
+  },
+];
+
 
   return (
     <section

@@ -57,22 +57,23 @@ const Navbar = () => {
   ];
 
   const socialLinks = [
-    {
-      name: "Github",
-      href: "https://github.com/AHBRIJESH",
-      icon: <Github className="h-5 w-5" />,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/",
-      icon: <Linkedin className="h-5 w-5" />,
-    },
-    {
-      name: "Email",
-      href: "mailto:ahbrijesh2004@gmail.com",
-      icon: <Mail className="h-5 w-5" />,
-    },
-  ];
+  {
+    name: "Github",
+    href: "https://github.com/faysal123455", // ✅ lien exact
+    icon: <Github className="h-5 w-5" />,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/sarker-faysal-05066521", // ✅ lien exact
+    icon: <Linkedin className="h-5 w-5" />,
+  },
+  {
+    name: "Email",
+    href: "mailto:faisaladnan700@gmail.com", // ✅ email confirmé
+    icon: <Mail className="h-5 w-5" />,
+  },
+];
+
 
   return (
     <nav
@@ -87,12 +88,12 @@ const Navbar = () => {
         <a href="#" className="text-xl font-bold text-white flex items-center">
           <div className="w-10 h-10 rounded-full overflow-hidden mr-2 border-2 border-white">
             <img
-              src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png"
-              alt="A H Brijesh"
+              src="/public/lovable-uploads/professional_photo_faysal.png" // 🔁 Mets ici ta photo dans le dossier public
+              alt="Faysal Sarker"
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="text-white">A H BRIJESH</span>
+          <span className="text-white">Faysal SARKER</span>
         </a>
 
         {/* Desktop Navigation */}

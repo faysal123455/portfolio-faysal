@@ -1,47 +1,63 @@
 import React from "react";
-import { Database, Code, Terminal, Brain, ChevronRight } from "lucide-react";
+import {
+  Cloud,
+  Server,
+  Terminal,
+  Code2,
+  Layers,
+  Settings2,
+  ChevronRight,
+} from "lucide-react";
 import Animated from "./Animated";
 
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Programming Languages",
-      icon: <Code className="h-8 w-8 text-navy-600" />,
+      title: "Cloud & Virtualisation",
+      icon: <Cloud className="h-8 w-8 text-navy-600" />,
       skills: [
-        "Python Programming",
-        "Java Programming",
-        "C Programming",
-        "SAP ABAP",
+        "Azure (NSG, RG, Load Balancer, Auto-scaling)",
+        "VMware",
+        "MicroStack (OpenStack)",
+        "Vagrant",
+        "Incus (LXC)",
       ],
     },
     {
-      title: "Database & Data",
-      icon: <Database className="h-8 w-8 text-navy-600" />,
+      title: "Infrastructure & DevOps",
+      icon: <Server className="h-8 w-8 text-navy-600" />,
       skills: [
-        "MySQL",
-        "Data Analytics (NumPy & Pandas)",
-        "Data Visualization (Matplotlib & Seaborn)",
+        "Docker & Docker Compose",
+        "Kubernetes (k3s, Helm)",
+        "Ansible",
+        "Terraform (IaC)",
+        "CI/CD (GitHub Actions, GitLab CI, Jenkins, ArgoCD)",
       ],
     },
     {
-      title: "AI & Machine Learning",
-      icon: <Brain className="h-8 w-8 text-navy-600" />,
+      title: "Scripting & Développement",
+      icon: <Code2 className="h-8 w-8 text-navy-600" />,
+      skills: ["Bash", "Python", "PowerShell", "FastAPI", "Node.js"],
+    },
+    {
+      title: "Outils & Supervision",
+      icon: <Layers className="h-8 w-8 text-navy-600" />,
       skills: [
-        "Machine Learning (Scikit-learn, TensorFlow & Keras)",
-        "Deep Learning",
-        "Natural Language Processing",
-        "Computer Vision",
+        "Linux (Ubuntu, Debian)",
+        "Git & GitHub / GitLab",
+        "Prometheus & Grafana",
+        "Zabbix",
+        "Vault, Portainer, Locky",
       ],
     },
     {
-      title: "Tools & Platforms",
-      icon: <Terminal className="h-8 w-8 text-navy-600" />,
+      title: "Méthodologies & Gestion",
+      icon: <Settings2 className="h-8 w-8 text-navy-600" />,
       skills: [
-        "GitHub",
-        "Jupyter Notebook",
-        "Google Colab",
-        "VS Code",
-        "Flask",
+        "Méthode Agile & SCRUM",
+        "Gestion de projet (Simplon Agile certifié)",
+        "Rédaction de documentation technique",
+        "Analyse et résolution d'incidents",
       ],
     },
   ];
@@ -51,11 +67,11 @@ const SkillsSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl font-bold text-navy-900 mb-4">
-            Technical Skills
+            Compétences Techniques
           </h2>
           <div className="h-1 w-20 bg-navy-500 mx-auto rounded-full"></div>
           <p className="text-navy-700 mt-6">
-            Key skills and technologies I've mastered
+            Technologies que je maîtrise et utilise dans mes projets DevOps & Cloud
           </p>
         </div>
 

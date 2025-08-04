@@ -1,44 +1,41 @@
 import React from "react";
 import { Calendar, CheckCircle } from "lucide-react";
-import Animated from "./Animated"; // 👈 import the helper
+import Animated from "./Animated";
 
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "AI INTERN",
-      company: "AICTE INNOVATIVE INTERN",
-      period: "AUGUST 2024 – NOVEMBER 2024",
+      title: "Administrateur Système DevOps (alternance)",
+      company: "Ministère de l’Enseignement Supérieur • Supméca, Saint-Ouen",
+      period: "Mars 2025 – Juin 2025",
       description: [
-        "Developed a Face Recognition-Based Attendance System using Flask, TensorFlow, CNN, Keras, and MySQL",
-        "Achieved 97% accuracy, automating attendance tracking and reducing manual effort by 60%",
-        "Enabled recognition of 5 individuals within 10 seconds, showcasing expertise in deep learning and problem-solving",
-        "Collaborated with team members to ensure the efficient delivery of the solution with a focus on user-centric design",
+        "Mise en place d’une infrastructure cloud privée à base d’OpenStack (MicroStack) sur VMware.",
+        "Automatisation du déploiement des services avec Ansible, Docker, Terraform.",
+        "Mise en place d’une stack de supervision Prometheus + Grafana.",
+        "Documentation technique complète, sécurisation des accès SSH, gestion des utilisateurs et journaux système.",
       ],
     },
     {
-      title: "SAP ABAP INTERN",
-      company: "FORD MOTOR COMPANY",
-      period: "JUNE 2024 – AUGUST 2024",
+      title: "Développeur Web (alternance)",
+      company: "Pernod Ricard France (Siège Paris)",
+      period: "Janvier 2023 – Janvier 2024",
       description: [
-        "Gained expertise in SAP ERP for the automotive sector, working on data migration and system optimization",
-        "Applied ABAP OOP and data conversion techniques (RFC, LSMW, LTMC, BAPI) to enhance data accuracy for vehicle production workflows",
-        "Contributed to RICEF development, optimizing SAP ABAP programming to improve data migration efficiency by 20%",
-        "Ensured 100% data accuracy during migration, minimizing transition errors",
-        "Collaborated with cross-functional teams to deliver seamless and reliable SAP solutions",
+        "Participation au développement du portail interne de données (Data Portal).",
+        "Intégration d’API internes, dashboard interactif avec React et Node.js.",
+        "Déploiement continu via GitLab CI/CD, et conteneurisation avec Docker.",
+        "Collaboration avec des équipes data et techniques dans un environnement Agile.",
       ],
     },
     {
-      title: "JOB SIMULATIONS",
-      description: [
-        "J.P. Morgan: Software Engineering",
-        "Cognizant: Artificial Intelligence",
-        "Accenture: Data Analytics",
-        "British Airways: Data Science",
-        "Tata Group: Data Visualization",
-      ],
+      title: "Projets personnels & certifications",
       company:
-        "Completed virtual job simulations in various industry-led scenarios, applying Python, Deep Learning, NLP, Computer Vision, and Data Visualization to solve real-world challenges.",
+        "Réalisation de projets techniques DevOps et suivi de formations certifiantes",
       period: "",
+      description: [
+        "Projet : Déploiement CI/CD avec GitHub Actions + Docker Hub + VPS cloud.",
+        "Certificat : Gestion de projet agile (Simplon, 2023).",
+        "Missions techniques personnelles : FastAPI, Zabbix, Locky, Vault, portainer.io…",
+      ],
     },
   ];
 
@@ -48,11 +45,11 @@ const ExperienceSection = () => {
         <Animated direction="up" delay={0}>
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold text-navy-900 mb-4">
-              Professional Experience
+              Expériences Professionnelles
             </h2>
             <div className="h-1 w-20 bg-navy-500 mx-auto rounded-full"></div>
             <p className="text-navy-700 mt-6">
-              Internships and professional projects that have shaped my skills
+              Alternances et projets concrets dans le domaine du DevOps, cloud et développement
             </p>
           </div>
         </Animated>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import Animated from "./Animated"; // 👈 Import your animation helper here
+import Animated from "./Animated";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -28,19 +28,19 @@ const ContactSection = () => {
 
       if (response.ok) {
         toast({
-          title: "Message Sent Successfully!",
-          description: "Thank you for your message. I'll get back to you soon.",
+          title: "Message envoyé avec succès !",
+          description: "Merci pour votre message, je vous répondrai bientôt.",
           duration: 5000,
         });
         form.reset();
       } else {
-        throw new Error("Submission failed");
+        throw new Error("Échec de l'envoi");
       }
     } catch (error) {
-      console.error("Submission error:", error);
+      console.error("Erreur :", error);
       toast({
-        title: "Message Sending Failed",
-        description: "Please try again or check your internet connection.",
+        title: "Échec de l'envoi",
+        description: "Veuillez réessayer ou vérifier votre connexion.",
         variant: "destructive",
         duration: 5000,
       });
@@ -55,18 +55,18 @@ const ContactSection = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold text-navy-900 mb-4">
-              Get In Touch
+              Me contacter
             </h2>
             <div className="h-1 w-20 bg-navy-500 mx-auto rounded-full"></div>
             <p className="text-navy-700 mt-6">
-              Feel free to reach out for opportunities or just to say hello
+              Pour une alternance, une opportunité ou simplement échanger.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <div>
               <h3 className="text-2xl font-bold text-navy-800 mb-6">
-                Contact Information
+                Coordonnées
               </h3>
 
               <div className="space-y-6">
@@ -75,9 +75,9 @@ const ContactSection = () => {
                     <MapPin className="h-5 w-5 text-navy-700" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-navy-900 mb-1">Location</h4>
+                    <h4 className="font-medium text-navy-900 mb-1">Adresse</h4>
                     <p className="text-navy-700">
-                      Kanyakumari, Tamil Nadu, India, 629151
+                      Montreuil, Île-de-France, France
                     </p>
                   </div>
                 </div>
@@ -89,10 +89,10 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium text-navy-900 mb-1">Email</h4>
                     <a
-                      href="mailto:ahbrijesh2004@gmail.com"
+                      href="mailto:faisaladnan700@gmail.com"
                       className="text-navy-700 hover:text-navy-500 transition-colors"
                     >
-                      ahbrijesh2004@gmail.com
+                      faisaladnan700@gmail.com
                     </a>
                   </div>
                 </div>
@@ -102,19 +102,19 @@ const ContactSection = () => {
                     <Phone className="h-5 w-5 text-navy-700" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-navy-900 mb-1">Phone</h4>
-                    <p className="text-navy-700">+91 6384665931</p>
+                    <h4 className="font-medium text-navy-900 mb-1">Téléphone</h4>
+                    <p className="text-navy-700">06 62 06 40 83</p>
                   </div>
                 </div>
               </div>
 
               <div className="mt-10">
                 <h4 className="font-medium text-navy-900 mb-4">
-                  Connect With Me
+                  Me retrouver en ligne
                 </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="https://github.com/AHBRIJESH"
+                    href="https://github.com/faysal123455"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-navy-100 p-3 rounded-full text-navy-700 hover:bg-navy-200 transition-colors"
@@ -123,7 +123,7 @@ const ContactSection = () => {
                     <Github className="h-5 w-5" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/"
+                    href="https://www.linkedin.com/in/sarker-faysal-05066521"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-navy-100 p-3 rounded-full text-navy-700 hover:bg-navy-200 transition-colors"
@@ -137,19 +137,19 @@ const ContactSection = () => {
 
             <div className="bg-white rounded-lg shadow-md p-6 border border-navy-100">
               <h3 className="text-2xl font-bold text-navy-800 mb-6">
-                Send a Message
+                Envoyer un message
               </h3>
 
               <form
                 onSubmit={handleSubmit}
                 className="space-y-4"
-                action="https://formsubmit.co/ahbrijesh2004@gmail.com"
+                action="https://formsubmit.co/faisaladnan700@gmail.com"
                 method="POST"
               >
                 <input
                   type="hidden"
                   name="_subject"
-                  value="New Portfolio Contact Message"
+                  value="Nouveau message depuis le portfolio"
                 />
                 <input type="hidden" name="_captcha" value="false" />
 
@@ -158,12 +158,12 @@ const ContactSection = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-navy-700 mb-1"
                   >
-                    Your Name
+                    Votre nom
                   </label>
                   <Input
                     id="name"
                     name="name"
-                    placeholder="Enter your name"
+                    placeholder="Entrez votre nom"
                     required
                     autoComplete="off"
                     className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
@@ -175,13 +175,13 @@ const ContactSection = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-navy-700 mb-1"
                   >
-                    Your Email
+                    Votre email
                   </label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder="Entrez votre email"
                     required
                     autoComplete="off"
                     className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
@@ -193,12 +193,12 @@ const ContactSection = () => {
                     htmlFor="subject"
                     className="block text-sm font-medium text-navy-700 mb-1"
                   >
-                    Subject
+                    Sujet
                   </label>
                   <Input
                     id="subject"
                     name="subject"
-                    placeholder="Enter subject"
+                    placeholder="Sujet du message"
                     required
                     autoComplete="off"
                     className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
@@ -215,7 +215,7 @@ const ContactSection = () => {
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Enter your message"
+                    placeholder="Écrivez votre message ici..."
                     rows={4}
                     required
                     className="border-navy-200 focus:border-navy-500 focus:ring-navy-500"
@@ -227,7 +227,7 @@ const ContactSection = () => {
                   className="w-full bg-navy-700 hover:bg-navy-800 text-white"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
                 </Button>
               </form>
             </div>

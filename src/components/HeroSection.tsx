@@ -25,18 +25,18 @@ const HeroSection = () => {
                 <div className="mr-4 hidden sm:block">
                   <Avatar className="h-24 w-24 border-4 border-navy-300">
                     <AvatarImage
-                      src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png"
-                      alt="A H Brijesh"
+                      src="/public/lovable-uploads/professional_photo_faysal.png" // 🔁 Place ici ton image réelle dans /public
+                      alt="Faysal Sarker"
                     />
-                    <AvatarFallback>AHB</AvatarFallback>
+                    <AvatarFallback>FS</AvatarFallback>
                   </Avatar>
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-4">
-                    A H BRIJESH
+                    Faysal SARKER
                   </h1>
                   <h2 className="text-xl md:text-2xl font-medium text-navy-600 mb-6">
-                    Software Engineer • Machine Learning Enthusiast
+                    Cybersécurité & Cloud • Ingénierie DevOps
                   </h2>
                 </div>
               </div>
@@ -44,26 +44,24 @@ const HeroSection = () => {
 
             <Animated delay={150} direction="up">
               <p className="text-lg text-navy-800 mb-8 max-w-2xl">
-                Enthusiastic entry-level professional seeking a role as Software
-                Engineer or Machine Learning Engineer. Eager to contribute to
-                innovative projects and collaborate with cross-functional teams,
-                demonstrating effective problem-solving skills and utilizing
-                strong presentation skills and data analysis abilities.
+                Actuellement en Master Cybersécurité & Cloud Computing, je suis passionné par les environnements techniques,
+                l'automatisation (Ansible, Terraform, CI/CD), la conteneurisation (Docker, Kubernetes) et les infrastructures cloud (OpenStack, VMware).
+                Je recherche une alternance à partir de septembre 2025 (1 sem. école / 3 sem. entreprise), pour contribuer à des projets concrets et innovants.
               </p>
             </Animated>
 
             <Animated delay={300} direction="up">
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-navy-700 hover:bg-navy-800 text-white">
-                  <a href="/lovable-uploads/Brijesh.pdf" download="Brijesh.pdf">
-                    Download Resume
+                  <a href="/Faysal_SARKER_CV.pdf" download="Faysal_SARKER_CV.pdf">
+                    Télécharger mon CV
                   </a>
                 </Button>
                 <Button
                   variant="outline"
                   className="border-navy-600 text-navy-700 hover:bg-navy-100"
                 >
-                  <a href="#contact">Contact Me</a>
+                  <a href="#contact">Me contacter</a>
                 </Button>
               </div>
             </Animated>
@@ -90,42 +88,40 @@ const HeroSection = () => {
                     <div className="sm:hidden flex justify-center mb-4">
                       <Avatar className="h-24 w-24 border-4 border-navy-300">
                         <AvatarImage
-                          src="/lovable-uploads/3beb2243-0086-46e4-9136-a01b49030d8d.png"
-                          alt="A H Brijesh"
+                          src="/public/lovable-uploads/professional_photo_faysal.png"
+                          alt="Faysal Sarker"
                         />
-                        <AvatarFallback>AHB</AvatarFallback>
+                        <AvatarFallback>FS</AvatarFallback>
                       </Avatar>
                     </div>
 
                     {[
                       {
                         icon: <MapPin className="h-5 w-5 text-navy-700" />,
-                        text: "Kanyakumari, Tamil Nadu, India, 629151",
+                        text: "Montreuil, Île-de-France, France",
                       },
                       {
                         icon: <Mail className="h-5 w-5 text-navy-700" />,
                         text: (
                           <a
-                            href="mailto:ahbrijesh2004@gmail.com"
+                            href="mailto:faisaladnan700@gmail.com"
                             className="text-navy-800 hover:text-navy-600"
                           >
-                            ahbrijesh2004@gmail.com
+                            faisaladnan700@gmail.com
                           </a>
                         ),
                       },
                       {
                         icon: <Phone className="h-5 w-5 text-navy-700" />,
-                        text: "+91 6384665931",
+                        text: "06 62 06 40 83",
                       },
                       {
-                        icon: (
-                          <GraduationCap className="h-5 w-5 text-navy-700" />
-                        ),
-                        text: "B.E. CSE, Rajiv Gandhi College of Engineering",
+                        icon: <GraduationCap className="h-5 w-5 text-navy-700" />,
+                        text: "Bac+3/4 Admin. Systèmes DevOps – Simplon.co",
                       },
                       {
                         icon: <Award className="h-5 w-5 text-navy-700" />,
-                        text: "8.2 CGPA at the end of Course",
+                        text: "En cours : Master Cybersécurité & Cloud",
                       },
                     ].map((item, idx) => (
                       <Animated
