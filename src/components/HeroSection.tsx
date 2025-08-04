@@ -25,7 +25,7 @@ const HeroSection = () => {
                 <div className="mr-4 hidden sm:block">
                   <Avatar className="h-24 w-24 border-4 border-navy-300">
                     <AvatarImage
-                      src="/public/lovable-uploads/professional_photo_faysal.png" // 🔁 Place ici ton image réelle dans /public
+                      src="/lovable-uploads/professional_photo_faysal.png" // 🔁 Place ici ton image réelle dans /public
                       alt="Faysal Sarker"
                     />
                     <AvatarFallback>FS</AvatarFallback>
